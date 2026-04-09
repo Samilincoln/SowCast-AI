@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-earth-50: #fdfcfb;
+  --color-earth-100: #f7f3f0;
+  --color-earth-200: #eee5df;
+  --color-earth-300: #e0d1c7;
+  --color-earth-400: #cbb3a3;
+  --color-earth-500: #b69682;
+  --color-earth-600: #a57f6a;
+  --color-earth-700: #8a6958;
+  --color-earth-800: #71574a;
+  --color-earth-900: #5d493f;
+  --color-earth-950: #312621;
+
+  --color-leaf-50: #f4f7f2;
+  --color-leaf-100: #e6eee2;
+  --color-leaf-200: #cfddc8;
+  --color-leaf-300: #acc3a2;
+  --color-leaf-400: #84a477;
+  --color-leaf-500: #648556;
+  --color-leaf-600: #4e6a43;
+  --color-leaf-700: #3f5437;
+  --color-leaf-800: #34442e;
+  --color-leaf-900: #2d3a29;
+  --color-leaf-950: #171f15;
+
+  --color-background: var(--color-earth-50);
+  --color-foreground: var(--color-earth-950);
+  --color-card: #ffffff;
+  --color-card-foreground: var(--color-earth-950);
+  --color-popover: #ffffff;
+  --color-popover-foreground: var(--color-earth-950);
+  --color-primary: var(--color-leaf-600);
+  --color-primary-foreground: #ffffff;
+  --color-secondary: var(--color-earth-100);
+  --color-secondary-foreground: var(--color-earth-900);
+  --color-muted: var(--color-earth-100);
+  --color-muted-foreground: var(--color-earth-600);
+  --color-accent: var(--color-leaf-100);
+  --color-accent-foreground: var(--color-leaf-700);
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #ffffff;
+  --color-border: var(--color-earth-200);
+  --color-input: var(--color-earth-200);
+  --color-ring: var(--color-leaf-500);
+  --radius-lg: 0.75rem;
+  --radius-md: 0.5rem;
+  --radius-sm: 0.25rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.glass-card {
+  @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-xl;
+}
+
+.timeline-line {
+  @apply absolute left-4 top-0 bottom-0 w-px bg-leaf-200 md:left-1/2;
+}
+
+.timeline-dot {
+  @apply absolute left-4 w-4 h-4 rounded-full bg-leaf-500 border-4 border-earth-50 -translate-x-1/2 md:left-1/2;
+}

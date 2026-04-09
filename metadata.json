@@ -1,0 +1,5 @@
+{
+  "name": "SowCast AI",
+  "description": "AI-powered planting calendar for farmers. Get optimal planting and harvest windows based on location, crop, and rainfall data.",
+  "requestFramePermissions": []
+}
